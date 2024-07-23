@@ -1,0 +1,101 @@
+<scroll-view scroll-y class="scrollPage">
+
+  <view>
+  </view>
+
+  <view class="cu-bar margin-top bg-white">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text> 语音交流
+    </view>
+  </view>
+
+
+  <view class="padding">
+    <button 
+      class="cu-btn block line-blue margin-tb-sm lg" 
+      type="" 
+      bindtouchstart="startRecording" 
+      bindtouchend="stopRecording">
+      点击对话
+    </button>
+  </view>
+
+
+
+
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>功能选择
+    </view>
+  </view>
+
+  <!-- 宝宝身体情况查询 -->
+  <view class="grid col-2 padding-sm">
+    <view class="padding-sm">
+      <view class="bg-gradual-red padding radius text-center shadow-blur" bindtap="showBottomWindow">
+        <view class="text-lg">宝宝巴士</view>
+        <view class="margin-top-sm text-Abc"> 传感器数据概况</view>
+      </view>
+    </view>
+
+    <view class="padding-sm">
+      <view class="bg-gradual-pink padding radius text-center shadow-blur" bindtap="navigateToRoom">
+        <view class="text-lg">宝宝环境</view>
+        <view class="margin-top-sm text-Abc">图表信息</view>
+      </view>
+    </view>
+
+    <view class="padding-sm">
+      <view class="bg-gradual-orange padding radius text-center shadow-blur" bindtap="navigateToMusic">
+        <view class="text-lg">宝宝助眠</view>
+        <view class="margin-top-sm text-Abc">播放舒缓音乐</view>
+      </view>
+    </view>
+
+    <view class="padding-sm">
+      <view class="bg-gradual-green padding radius text-center shadow-blur" bindtap="navigateToRecord">
+        <view class="text-lg">宝宝记录</view>
+        <view class="margin-top-sm text-Abc">宝宝情况的记录</view>
+      </view>
+    </view>
+
+    <view class="padding-sm">
+      <view class="bg-gradual-blue padding radius text-center shadow-blur" bindtap="navigateToStory">
+        <view class="text-lg">睡前故事</view>
+        <view class="margin-top-sm text-Abc">给宝宝讲个故事</view>
+      </view>
+    </view>
+    <view class="padding-sm">
+      <view class="bg-gradual-purple padding radius text-center shadow-blur" bindtap="navigateToBot">
+        <view class="text-lg">宝宝知识</view>
+        <view class="margin-top-sm text-Abc">和bot对话</view>
+      </view>
+    </view>
+
+
+<web-view class="full-screen-web-view" src="{{webUrl}}" wx:if="{{showWebView}}"></web-view>
+
+    <!-- <view class="padding-sm">
+      <view class="bg-gradual-pink padding radius text-center shadow-blur">
+        <view class="text-lg">霞彩</view>
+        <view class="margin-top-sm text-Abc">#ec008c - #6739b6</view>
+      </view>
+    </view> -->
+  </view>
+
+  <!-- Bottom window -->
+  <view wx:if="{{showBottom}}" class="bottom-window">
+    <view class="bottom-window-content">
+      <view>宝宝温度: {{babyTemperature}}°C</view>
+      <view style="margin-bottom: 4ch;">室温: {{ambientTemperature}}°C</view>
+      <view style="margin-bottom: 4ch;">噪声: {{roomSound}}dB</view>
+      <view style="margin-bottom: 4ch;">CO2浓度: {{roomCO2}}ppm</view>
+      <view style="margin-bottom: 4ch;">甲醛含量: {{roomMeth}}μg/m³</view>
+      <view style="margin-bottom: 4ch;">TVOC含量: {{roomTvoc}}ppb</view>
+      <view class="containera">
+      </view>
+      <button bindtap="hideBottomWindow">关闭</button>
+    </view>
+  </view>
+</scroll-view>

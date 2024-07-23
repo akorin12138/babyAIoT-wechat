@@ -1,0 +1,15 @@
+<!--播放器-->
+<view class="player"  wx:for="{{playlist}}" wx:key="id"  bindtap="play" data-id="{{item.id}}">
+  <image class="player-cover" src="{{item.coverImgUrl}}"/>
+  <view class="player-info">
+    <view class="player-info-title">{{item.title}}</view>
+    <view class="player-info-singer">{{item.singer}}</view>
+  </view>
+</view>
+<view class="player">
+  <view class="player-controls">
+  <!-- 播放 -->
+  <image wx:if="{{state=='paused'}}" src="../../static/img/images/bf.jpg"  bindtap="unpause"/>
+  <image wx:else src="../../static/img/images/zt.jpg" bindtap="pause" />
+  </view>
+</view>

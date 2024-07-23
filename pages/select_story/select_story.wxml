@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="story-header">
+    <view class="story-title">{{title}}</view>
+  </view>
+  <view class="story-content">{{content}}</view>
+  <view wx:if="!{{showAudioControls}}">
+    <button class="cu-btn line-black round shadow" bindtap="playStoryLocal" > 点击播放</button>
+  </view>
+
+  <!-- 音频控制小窗户 -->
+  <view class="audio-controls" wx:if="{{showAudioControls}}">
+    <!-- 横线块 -->
+    <view class="close-bar" bindtap="hideAudioControls"></view>
+    
+    <slider min="0" max="{{duration}}" step="1" value="{{currentTime}}" bindchange="seekAudio"></slider>
+    <view class="controls">
+      <button bindtap="togglePlayPauseLocal">{{voicePlayFlag ? '暂停' : '播放'}}</button>
+      <text>{{currentTime | formatTime}} s/ {{duration | formatTime}}s </text>
+    </view>
+  </view>
+</view>

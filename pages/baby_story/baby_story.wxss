@@ -1,0 +1,48 @@
+/* 设置页面容器样式 */
+.container {
+  background-color: #e4e4e4; /* 灰色背景 */
+  min-height: 100vh; /* 使背景颜色覆盖整个页面高度 */
+  padding: 20rpx; /* 给容器添加内边距 */
+}
+
+
+.cu-bar {
+  margin-top: 20rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.story-list {
+  margin-top: 15rpx;
+  width: 100%;
+}
+
+.story-item {
+  width: 100%; /* 占据屏幕小程序的90%宽度 */
+  background-color: #ffffff; /* 白色填充框 */
+  margin-bottom: 25rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.story-title {
+  font-size: 36rpx;
+  color: rgb(92, 8, 8);
+  font-weight: bold;
+}
+
+.story-like {
+  font-size: 36rpx;
+}
+
+.story-content {
+  font-size: 28rpx;
+  color: rgb(22, 22, 22);
+}

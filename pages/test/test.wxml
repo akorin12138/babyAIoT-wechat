@@ -1,0 +1,6 @@
+<view>
+  <button bindtap="getUserInfo">获取数据</button>
+  <view wx:for="{{stories}}" wx:key="id">
+    <text>{{item.title}}</text>  <!-- 替换为你的字段名 -->
+  </view>
+</view>

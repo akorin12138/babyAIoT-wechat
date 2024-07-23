@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <web-view
+      src="http://192.168.35.179:10086/video_feed"
+    />
+  </view>
+</scroll-view>

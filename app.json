@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index"
+  ],
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#00BFFF",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "position": "bottom",
+    "custom": false,
+    "list": [
+      { 
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/img/home.png",
+        "selectedIconPath": "/static/img/home.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "实时查看",
+        "iconPath": "static/img/user.png",
+        "selectedIconPath": "/static/img/user.png"
+      }
+    ]
+  },
+
+
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+
+  "subPackages": [
+    {
+      "root": "pages/babyrecord/",
+      "name": "babyrecord",
+      "pages": [
+        "babyrecord"
+      ]
+    },
+    {
+      "root": "pages/music/",
+      "name": "music",
+      "pages": [
+        "music"
+      ]
+    },
+    {
+      "root": "pages/baby_story/",
+      "name": "baby_story",
+      "pages": [
+        "baby_story"
+      ]
+    },
+    {
+      "root": "pages/room/",
+      "name": "room",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/select_story/",
+      "name": "select_story",
+      "pages": [
+        "select_story"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<view class="container">
+
+  <view class="story-list">
+    <block wx:for="{{stories}}" wx:key="id">
+      <view class="story-item" data-id="{{ item.id }}" bindtap="viewFullStory">
+        <view class="story-header">
+          <text class="story-title">{{item.title}}</text>
+          <view class="story-like" bindtap="likeStory" data-id="{{item.id}}">
+            <text class="cuIcon-like" style="color: {{item.liked ? 'red' : 'gray'}}"></text>
+          </view>
+        </view>
+        <view class="story-content">{{item.synopsis}}</view>
+      </view>
+    </block>
+  </view>
+</view>

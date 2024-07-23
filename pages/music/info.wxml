@@ -1,0 +1,54 @@
+<!--最外层scroll-view自动伸缩-->
+<scroll-view class="content-info" scroll-y>
+<!--使用swiper实现轮播图-->
+  <swiper class="content-info-slide" indicator-color="rgba(255,255,255,.5)"
+  indicator-active-color="#fff" indicator-dots circular autoplay>
+    <swiper-item>
+      <image src="/pages/images/banner1.jpg" mode="widthFix"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/images/banner2.jpg" mode="widthFix"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/images/banner3.jpg" mode="widthFix"/>
+    </swiper-item>
+  </swiper>
+  <view class="content-info-portal">
+    <view>
+      <image src="/pages/images/SR.jpg"/>
+      <text>私人FM</text>
+    </view>
+    <view>
+      <image src="/pages/images/MR.jpg"/>
+      <text>每日歌曲推荐</text>
+    </view>
+    <view>
+      <image src="/pages/images/NEW.jpg"/>
+      <text>云音乐新歌榜</text>
+    </view>
+  </view>
+  <!--电台布局view-->
+  <view class="content-info-list">
+    <view class="list-title">推荐电台</view>
+    <view class="list-inner">
+      <view class="list-item">
+        <image src="/pages/images/1.jpg"/><view>五杀超神燃曲</view>
+      </view>
+      <view class="list-item">
+        <image src="/pages/images/3.jpg"/><view>想起初恋</view>
+      </view>
+      <view class="list-item">
+        <image src="/pages/images/2.jpg"/><view>静听古风优美歌曲</view>
+      </view>
+      <view class="list-item">
+        <image src="/pages/images/4.jpg"/><view>成为不了你喜欢的样子</view>
+      </view>
+      <view class="list-item">
+        <image src="/pages/images/5.jpg"/><view>一人一首代表曲</view>
+      </view>
+      <view class="list-item">
+        <image src="/pages/images/6.jpg"/><view>难平的不是山海，是你</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

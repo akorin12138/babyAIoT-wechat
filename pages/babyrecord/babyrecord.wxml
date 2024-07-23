@@ -1,0 +1,30 @@
+<!--pages/babyrecord/babyrecord.wxml-->
+<!-- <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">时间轴</view>
+</cu-custom> -->
+<view class="cu-bar margin-top bg-white">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text> 
+    宝宝记录
+  </view>
+</view>
+
+<view class="cu-timeline">
+  <!-- <view class="cu-time">{{time}}</view> -->
+  <view class="cu-item cur cuIcon-noticefill" wx:for="{{objectArray}}" wx:key="time">
+    <view class="{{item.babyStatus == '醒了' ? 'content bg-green shadow-blur' : item.babyStatus == '尿床了' ? 'content bg-blue shadow-blur' : 'content bg-red shadow-blur'}}">
+      <text>{{item.time}} 宝宝{{item.babyStatus}}</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-timeline">
+  <view class="cu-time">06-17</view>
+  <view class="cu-item cur cuIcon-noticefill" wx:for="{{fakeArray}}" wx:key="time">
+    <view class="{{item.babyStatus == '醒了' ? 'content bg-green shadow-blur' : item.babyStatus == '尿床了' ? 'content bg-blue shadow-blur' : 'content bg-red shadow-blur'}}">
+      <text>{{item.time}} 宝宝{{item.babyStatus}}</text>
+    </view>
+  </view>
+</view>
